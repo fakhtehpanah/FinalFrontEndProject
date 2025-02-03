@@ -65,7 +65,7 @@ export function Footer() {
             <div className="border-b lg:border-none py-2">
               <span>App & Payment</span>
               <p className="py-2 font-thin">Install NetMart App from App Store or Google Play</p>
-              <div className="flex justify-between mx-10 py-3 lg:justify-center">
+              <div className="flex justify-between mx-10 py-3 lg:justify-center gap-3">
                 <ImageView src={AppStore} alt=""/>
                 <ImageView src={GooglePlay} alt=""/>
               </div>

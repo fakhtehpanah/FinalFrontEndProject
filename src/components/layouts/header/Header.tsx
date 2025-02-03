@@ -1,29 +1,26 @@
 import React from 'react'
 import Cart from '/Users/fakhtehpanah/Desktop/Programming projects/shop next/my-app/public/01 align center.svg'
 import User from '/public/fi-rs-user.svg'
-import Logo from '/public/Logo.svg'
 import Menu from '/public/menu.svg'
 import Headset from "/Users/fakhtehpanah/Desktop/Programming projects/shop next/my-app/public/fi-rs-headset 1.svg";
 import Apps from '/Users/fakhtehpanah/Desktop/Programming projects/shop next/my-app/public/fi-rs-apps.svg'
 import Search from '/Users/fakhtehpanah/Desktop/Programming projects/shop next/my-app/public/fi-rs-search.svg'
 import Flame from '/Users/fakhtehpanah/Desktop/Programming projects/shop next/my-app/public/fi-rs-flame 1.svg'
-import { ImageView } from '@/components/common'
+import { ImageView, Logo } from '@/components/common'
 import Link from 'next/link'
+import { SearchForm } from './search-form'
 export function Header() {
   return (
     <header>
         <div className='border-b flex justify-between py-8 px-6'>
-            <div>
-                <ImageView src={Logo} alt='logo' width={242} height={66} className='w-[117px] lg:w-[242px]'/>
-            </div>
-            <div className=' hidden lg:flex'>
-                    <form action="#" name='search-form' method='post' className='flex items-center'>
-                        <input type="text" name='search_text' placeholder='Search for items' className='py-2 px-20 rounded-md focus:outline-none font-thin' />
-                        <button>click</button>
-                    </form>
-            </div>
+            <Logo />
+            <SearchForm/>
             <div className='lg:hidden'>
                 <ImageView src={Menu} alt='menu'/>
+                <div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
             <ul className='hidden lg:flex p-6'>
                 <Link href="/account">
