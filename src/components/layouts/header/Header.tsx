@@ -1,26 +1,26 @@
 import React from 'react'
 import Cart from '/Users/fakhtehpanah/Desktop/Programming projects/shop next/my-app/public/01 align center.svg'
 import User from '/public/fi-rs-user.svg'
-import Menu from '/public/menu.svg'
+import menu from '/public/menu.svg'
+// import Headset from "/Users/fakhtehpanah/Desktop/Programming projects/shop next/my-app/public/fi-rs-headset 1.svg";
+
 import Headset from "/Users/fakhtehpanah/Desktop/Programming projects/shop next/my-app/public/fi-rs-headset 1.svg";
 import Apps from '/Users/fakhtehpanah/Desktop/Programming projects/shop next/my-app/public/fi-rs-apps.svg'
-import Search from '/Users/fakhtehpanah/Desktop/Programming projects/shop next/my-app/public/fi-rs-search.svg'
+import Search from '/Users/fakhtehpanah/Desktop//Programming projects/shop next/my-app/public/fi-rs-search.svg'
 import Flame from '/Users/fakhtehpanah/Desktop/Programming projects/shop next/my-app/public/fi-rs-flame 1.svg'
-import { ImageView, Logo } from '@/components/common'
+import { IconBox, ImageView, Logo } from '@/components/common'
 import Link from 'next/link'
 import { SearchForm } from './search-form'
+import { Menu } from './menu';
 export function Header() {
   return (
     <header>
-        <div className='border-b flex justify-between py-8 px-6'>
+        <div className='border-b flex justify-between py-5 items-center px-6'>
             <Logo />
             <SearchForm/>
             <div className='lg:hidden'>
-                <ImageView src={Menu} alt='menu'/>
-                <div>
-                    <div></div>
-                    <div></div>
-                </div>
+                <ImageView src={menu} alt='menu'/>
+                <Menu/>
             </div>
             <ul className='hidden lg:flex p-6'>
                 <Link href="/account">
@@ -38,9 +38,9 @@ export function Header() {
             </ul>
         </div>
         <div className='flex justify-between border-b px-6 py-8 lg:hidden'>
-            <div>
-                <ImageView src={Search} alt='search'/>
-            </div>
+            <button>
+                <ImageView src={'/fi-rs-search.svg'}  alt='search' width={20} height={20}/>
+            </button>
             <ul className='flex gap-2'>
                 <Link href={"/account"}>
                     <li>
@@ -54,7 +54,7 @@ export function Header() {
                 </Link>
             </ul>
         </div>  
-        <div className='hidden lg:flex justify-between px-6 py-10'>
+        <div className='hidden lg:flex justify-between px-6 py-2 items-center border-b'>
             <div>
                 <div className='bg-[#3BB77E] p-4 text-white rounded flex gap-3'>
                     <ImageView src={Apps}/>
@@ -63,13 +63,21 @@ export function Header() {
             </div>     
             <div>
                 <ul className='flex gap-6'>
+                    <Link href={'/'}>
                     <li className='flex gap-1'>
                         <ImageView src={Flame}/>
                         <p>Hot Deals</p>
                     </li>
-                    <li>Home</li>
-                    <li>Vegetables</li>
-                    <li>Drink</li>
+                    </Link>
+                    <Link href={'/'}>
+                        <li>Home</li>
+                    </Link>
+                    <Link href={'/'}>
+                        <li>Vegetables</li>
+                    </Link>
+                    <Link href={'/drink'}>
+                        <li>Drink</li>
+                    </Link>
                 </ul>
             </div> 
             <div className='flex p-2'>

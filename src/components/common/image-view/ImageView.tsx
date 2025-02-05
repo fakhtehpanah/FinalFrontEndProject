@@ -7,9 +7,9 @@ interface Props {
     height: number,
     className?: string
 }
-export function ImageView({src, alt, width, height, className = ''}: Props) {
+export function ImageView({src, alt,width, height, className = ''}: Props) {
   return (
-        <Image src={src} alt={alt} width={width} height={height} className={className}/>
+        <Image src={src} alt={alt} className={className} width={width} height={height}/>
   )
 }
 

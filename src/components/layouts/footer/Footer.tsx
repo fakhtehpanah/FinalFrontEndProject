@@ -40,7 +40,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col lg:grid grid-cols-3">
             <div className="border-b lg:border-none py-2">
-              <span>Company</span>
+              <span className="font-bold">Company</span>
               <ul>
                 <li className="font-thin">About Us</li>
                 <li className="font-thin">Delivery Information</li>
@@ -52,7 +52,7 @@ export function Footer() {
               </ul>
             </div>
             <div className="border-b lg:border-none py-2">
-              <span>Information</span>
+              <span className="font-bold">Information</span>
               <ul>
                 <li className="font-thin">Search Terms</li>
                 <li className="font-thin">Advanced Search</li>
@@ -63,7 +63,7 @@ export function Footer() {
               </ul>
             </div>
             <div className="border-b lg:border-none py-2">
-              <span>App & Payment</span>
+              <span className="font-bold">App & Payment</span>
               <p className="py-2 font-thin">Install NetMart App from App Store or Google Play</p>
               <div className="flex justify-between mx-10 py-3 lg:justify-center gap-3">
                 <ImageView src={AppStore} alt=""/>
